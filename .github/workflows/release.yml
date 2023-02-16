@@ -21,9 +21,9 @@ jobs:
       output_new_tag: ${{ steps.taggerFinal.outputs.new_tag }}
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@master
     - name: Bump version and push tag
-      uses: wiktorj/github-tag-action@main
+      uses: wiktorj/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
