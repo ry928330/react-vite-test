@@ -23,6 +23,7 @@ jobs:
     steps:
       - name: "Checkout"
         uses: "actions/checkout@v3"
+        uses: "butlerlogic/action-autotag@stable"
         with:
           fetch-depth: '0'
       - name: Generate Final Version
@@ -31,7 +32,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-
       - name: Echo New Tag
         run: echo "The next tag version will be:${{ steps.taggerFinal.outputs.new_tag }}"
 
