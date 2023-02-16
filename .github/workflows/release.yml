@@ -14,6 +14,26 @@ jobs:
       - name: Info
         run: echo "$GITHUB_CONTEXT"
     
+  generate_git_tags:
+    name: 'GitHub Tags'
+    runs-on: ubuntu-latest
+    outputs:
+      output_new_tag: ${{ steps.taggerFinal.outputs.new_tag }}
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3"
+        with:
+          fetch-depth: 0
+      - name: Generate Final Version
+        id: taggerFinal
+        uses: anothrNick/github-tag-action@1.36.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+
+      - name: Echo New Tag
+        run: echo "The next tag version will be:${{ steps.taggerFinal.outputs.new_tag }}"
 
   generate_git_release:
     needs: generate_git_tags
