@@ -21,11 +21,16 @@ jobs:
       output_new_tag: ${{ steps.taggerFinal.outputs.new_tag }}
 
     steps:
-    - uses: actions/checkout@master
-    - name: Bump version and push tag
-      uses: wiktorj/github-tag-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Checkout"
+        uses: "actions/checkout@v3"
+        with:
+          fetch-depth: '0'
+      - name: Create Tag
+        uses: negz/create-tag@v1
+        with:
+          version: ${{ github.event.inputs.version }}
+          message: ${{ github.event.inputs.message }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   generate_git_release:
     needs: generate_git_tags
