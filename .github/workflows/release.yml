@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-          CUSTOM_TAG: '0.1.8'
+          CUSTOM_TAG: "0.1.8"
 
       - name: Echo New Tag
         run: echo "The next tag version will be:${{ steps.taggerFinal.outputs.new_tag }}"
