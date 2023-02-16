@@ -1,0 +1,6 @@
+[auth]
+token="c36bf46e6cec4a0cb3c10ee2ffc4fa2f2ff53d55e471444eb5995c645f3d4c7a"
+
+[defaults]
+org="personal-first-test"
+project="vite-react-test"

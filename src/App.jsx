@@ -2,7 +2,7 @@
  * @Author: ryyyyy
  * @Date: 2023-02-15 19:29:15
  * @LastEditors: ryyyyy
- * @LastEditTime: 2023-02-15 19:47:15
+ * @LastEditTime: 2023-02-16 12:03:38
  * @FilePath: /react-vite-test/src/App.jsx
  * @Description: 
  * 
@@ -26,7 +26,7 @@ class ValidateError extends Error {
   constructor(message) {
     super(message);
     // this.name = `error: ${message} from ${import.meta.env.VITE_RELEASE}}`;
-    this.name = `error: ${message} from ${release}}`;
+    this.name = `error: 3rd ${message} from ${release}}`;
   }
 }
 
