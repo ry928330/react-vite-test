@@ -26,14 +26,10 @@ jobs:
         with:
           fetch-depth: '0'
       - name: Generate Final Version
-        id: taggerFinal
-        uses: anothrNick/github-tag-action@1.55.0
+        uses: anothrNick/github-tag-action@1.61.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-          
-      - name: Echo New Tag
-        run: echo "The next tag version will be:${{ steps.taggerFinal.outputs.new_tag }}"
 
   generate_git_release:
     needs: generate_git_tags
