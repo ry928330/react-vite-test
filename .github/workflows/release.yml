@@ -39,6 +39,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Echo New Tag
+        run: echo "The next tag version will be:${{ needs.generate_git_tags.outputs.output_new_tag }}"
       - name: Release Action
         uses: ncipollo/release-action@v1.10.0
         with:
