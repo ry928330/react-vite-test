@@ -79,4 +79,4 @@ jobs:
           environment: production
           version: "s{{steps.split_repo_name.outputs._1}}@${{needs.generate_git_tags.outputs.output_new_tag}}"
           sourcemaps: "./dist"
-          url_prefix: "~"
+          url_prefix: "~/assets"
