@@ -27,12 +27,13 @@ jobs:
       - name: Release Action
         uses: ncipollo/release-action@v1.10.0
         with:
-          tag: ${{ needs.generate_git_tags.outputs.output_new_tag }}
+          #tag: ${{ needs.generate_git_tags.outputs.output_new_tag }}
           token: ${{ secrets.CHANGELOG_RELEASE }}
 
 
   generate_sentry_release:
-    needs: [generate_git_tags, generate_git_release]
+    #needs: [generate_git_tags, generate_git_release]
+    needs: generate_git_release
     name: Sentry Release
     runs-on: ubuntu-latest
     steps:
@@ -57,6 +58,7 @@ jobs:
           SENTRY_PROJECT: ${{secrets.SENTRY_PROJECT}}
         with:
           environment: production
-          version: "s{{steps.split_repo_name.outputs._1}}@${{needs.generate_git_tags.outputs.output_new_tag}}"
+          #version: "s{{steps.split_repo_name.outputs._1}}@${{needs.generate_git_tags.outputs.output_new_tag}}"
+          version: "s{{steps.split_repo_name.outputs._1}}"
           sourcemaps: "./dist"
           url_prefix: "~"
