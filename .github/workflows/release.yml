@@ -32,6 +32,7 @@ jobs:
           WITH_V: true
           DEFAULT_BRANCH: main
 
+
   generate_git_release:
     needs: generate_git_tags
     name: 'GitHub Release'
