@@ -14,27 +14,11 @@ jobs:
       - name: Info
         run: echo "$GITHUB_CONTEXT"
     
-  generate_git_tags:
-    name: 'GitHub Tags'
-    runs-on: ubuntu-latest
-    outputs:
-      output_new_tag: ${{ steps.taggerFinal.outputs.new_tag }}
 
-    steps:
-      - name: "Checkout"
-        uses: "actions/checkout@v3"
-        with:
-          fetch-depth: '0'
-      - name: Generate Final Version
-        uses: anothrNick/github-tag-action@1.59.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
-          DEFAULT_BRANCH: main
 
 
   generate_git_release:
-    needs: generate_git_tags
+    #needs: generate_git_tags
     name: 'GitHub Release'
     runs-on: 'ubuntu-latest'
     steps:
