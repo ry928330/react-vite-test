@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Echo New Tag
-        run: echo "The next tag version will be:${{ needs.generate_git_tags.outputs.output_new_tag }}"
+        run: echo "The tag is:${{ needs.generate_git_tags }}"
       - name: Release Action
         uses: ncipollo/release-action@v1.10.0
         with:
