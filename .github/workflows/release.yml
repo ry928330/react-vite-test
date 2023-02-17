@@ -30,7 +30,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           WITH_V: true
-          DEFAULT_BRANCH: main
           
   generate_git_release:
     needs: generate_git_tags
