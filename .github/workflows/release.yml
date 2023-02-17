@@ -42,8 +42,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Debug Tag
-        run: echo "The tag is:${{ needs.generate_git_tags.outputs }}xx${{ needs.generate_git_tags.output_new_tag }}"
       - name: Release Action
         uses: ncipollo/release-action@v1.10.0
         with:
