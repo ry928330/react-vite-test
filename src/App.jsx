@@ -2,7 +2,7 @@
  * @Author: ryyyyy
  * @Date: 2023-02-15 19:29:15
  * @LastEditors: ryyyyy
- * @LastEditTime: 2023-02-18 13:33:31
+ * @LastEditTime: 2023-02-18 13:41:15
  * @FilePath: /react-vite-test/src/App.jsx
  * @Description: 
  * 
@@ -13,7 +13,7 @@ import './App.css'
 
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
-let release = `react-vite-test@v0.28.0`;
+let release = `react-vite-test@v0.29.0`;
 
 Sentry.init({
   dsn: "https://1cfce72835ac47d9a6faf4b5821c153c@o1149366.ingest.sentry.io/4504683848794112",
@@ -26,7 +26,7 @@ class ValidateError extends Error {
   constructor(message) {
     super(message);
     // this.name = `error: ${message} from ${import.meta.env.VITE_RELEASE}}`;
-    this.name = `28th error: ${message}  with ${Math.random()}`;
+    this.name = `29th error: ${message}  with ${Math.random()}`;
   }
 }
 
