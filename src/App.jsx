@@ -2,7 +2,7 @@
  * @Author: ryyyyy
  * @Date: 2023-02-15 19:29:15
  * @LastEditors: ryyyyy
- * @LastEditTime: 2023-02-18 11:17:12
+ * @LastEditTime: 2023-02-18 11:20:17
  * @FilePath: /react-vite-test/src/App.jsx
  * @Description: 
  * 
@@ -13,7 +13,7 @@ import './App.css'
 
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
-let release = `react-vite-test@v0.19.0`;
+let release = `react-vite-test@v0.22.0`;
 
 Sentry.init({
   dsn: "https://1cfce72835ac47d9a6faf4b5821c153c@o1149366.ingest.sentry.io/4504683848794112",
