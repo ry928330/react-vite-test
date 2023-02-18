@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-  yarnBuild:
+  build:
     name: Execute Yarn Build
     runs-on: ubuntu-latest
     steps:
@@ -26,6 +26,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
     
   generate_git_tags:
+    needs: "build"
     name: 'GitHub Tags'
     runs-on: ubuntu-latest
     outputs:
