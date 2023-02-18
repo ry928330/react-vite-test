@@ -2,7 +2,7 @@
  * @Author: ryyyyy
  * @Date: 2023-02-15 19:29:15
  * @LastEditors: ryyyyy
- * @LastEditTime: 2023-02-18 13:41:15
+ * @LastEditTime: 2023-02-18 13:44:27
  * @FilePath: /react-vite-test/src/App.jsx
  * @Description: 
  * 
@@ -25,14 +25,12 @@ Sentry.init({
 class ValidateError extends Error {
   constructor(message) {
     super(message);
-    // this.name = `error: ${message} from ${import.meta.env.VITE_RELEASE}}`;
-    this.name = `29th error: ${message}  with ${Math.random()}`;
+    this.name = ` 29th error: ${message}  with ${Math.random()} `;
   }
 }
 
 function App() {
   const [count, setCount] = useState(0)
-
   function handleClickError(err) {
     throw new ValidateError(err);
   }
