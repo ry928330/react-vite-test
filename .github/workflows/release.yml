@@ -14,9 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install
+        run: npm install
       - name: Build
-        run: yarn build
+        run: npm run build
 
   information:
     name: GitHub Context
