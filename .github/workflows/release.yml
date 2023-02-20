@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: my-artifact
-          path:  /path/to/artifact
+          path:  dist/
       #- name: Set Output
       #  id: output
       #  run: echo ::set-output name=artifact::dist
