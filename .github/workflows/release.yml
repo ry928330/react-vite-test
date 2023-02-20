@@ -21,7 +21,12 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: dist
-          path: dist/
+          path: /dist/
+      #- name: Set Output
+      #  id: output
+      #  run: echo ::set-output name=artifact::dist
+      #  outputs:
+      #    artifact: ${{ steps.output.outputs.artifact }}
 
   information:
     name: GitHub Context
@@ -84,6 +89,11 @@ jobs:
           maxsplit: 1
       - name: Echo Repo Name
         run: echo "${{ steps.split_repo_name.outputs._1 }}@${{ steps.split_repo_name.outputs._2 }}"
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: /dist/
       - name: Sentry Release
         uses: getsentry/action-release@v1.2.0
         env:
@@ -95,3 +105,4 @@ jobs:
           version: "react-vite-test@${{needs.generate_git_tags.outputs.output_new_tag}}"
           sourcemaps: "./dist"
           url_prefix: "~/dist"
+          SENTRY_RELEASE_ASSETS: /dist
