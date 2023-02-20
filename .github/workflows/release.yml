@@ -107,5 +107,5 @@ jobs:
           environment: production
           version: "react-vite-test@${{needs.generate_git_tags.outputs.output_new_tag}}"
           sourcemaps: "./my-artifact/dist/assets"
-          url_prefix: "~/dist"
+          url_prefix: "~/dist/assets"
           
