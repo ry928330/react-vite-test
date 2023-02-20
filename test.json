@@ -1,0 +1,281 @@
+{
+  "event_id": "e08c3ed14490482cbcc2bcd26d47b6a2",
+  "project": 4504683848794112,
+  "release": "react-vite-test@v0.47.0",
+  "dist": null,
+  "platform": "javascript",
+  "message": "",
+  "datetime": "2023-02-20T11:13:47.353000Z",
+  "tags": [
+    ["browser", "Chrome 109.0.0"],
+    ["browser.name", "Chrome"],
+    ["device", "Mac"],
+    ["device.family", "Mac"],
+    ["environment", "production"],
+    ["handled", "yes"],
+    ["level", "error"],
+    ["mechanism", "instrument"],
+    ["os", "Mac OS X 10.15.7"],
+    ["os.name", "Mac OS X"],
+    ["release", "react-vite-test@v0.47.0"],
+    ["user", "ip:103.160.180.12"],
+    ["url", "http://10.10.46.26:5502/index.html"]
+  ],
+  "_metrics": {
+    "bytes.ingested.event": 3462,
+    "bytes.stored.event": 9574,
+    "flag.processing.error": true
+  },
+  "breadcrumbs": {
+    "values": [
+      {
+        "timestamp": 1676891627.18,
+        "type": "default",
+        "category": "sentry.transaction",
+        "level": "info",
+        "message": "71f6da548de44e679a1b25d03352539e",
+        "event_id": "71f6da548de44e679a1b25d03352539e"
+      },
+      {
+        "timestamp": 1676891627.349,
+        "type": "default",
+        "category": "ui.click",
+        "level": "info",
+        "message": "body > div#root > div.App > div.card > button"
+      }
+    ]
+  },
+  "contexts": {
+    "browser": { "name": "Chrome", "version": "109.0.0", "type": "browser" },
+    "device": {
+      "family": "Mac",
+      "model": "Mac",
+      "brand": "Apple",
+      "type": "device"
+    },
+    "os": { "name": "Mac OS X", "version": "10.15.7", "type": "os" }
+  },
+  "culprit": "n(assets/index)",
+  "environment": "production",
+  "errors": [
+    { "type": "restricted_ip" },
+    {
+      "type": "restricted_ip",
+      "url": "http://10.10.46.26:5502/assets/index-badca561.js"
+    }
+  ],
+  "exception": {
+    "values": [
+      {
+        "type": " 47th error: test error  with 0.5030169632678401 ",
+        "value": "test error",
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "HTMLDivElement.r",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 54,
+              "colno": 1367,
+              "in_app": true
+            },
+            {
+              "function": "em",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 17137,
+              "in_app": true
+            },
+            {
+              "function": "ou",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 17349,
+              "in_app": true
+            },
+            {
+              "function": "vs",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 33145,
+              "in_app": true
+            },
+            {
+              "function": "wf",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 8988,
+              "in_app": true
+            },
+            {
+              "function": "Ou",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 40,
+              "colno": 36765,
+              "in_app": true
+            },
+            {
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 36771,
+              "in_app": true
+            },
+            {
+              "function": "bf",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 31859,
+              "in_app": true
+            },
+            {
+              "function": "Aa",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 31442,
+              "in_app": true
+            },
+            {
+              "function": "Ah",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 10063,
+              "in_app": true
+            },
+            {
+              "function": "Mh",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 10006,
+              "in_app": true
+            },
+            {
+              "function": "Object.Bh",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 37,
+              "colno": 9852,
+              "in_app": true
+            },
+            {
+              "function": "onClick",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 62,
+              "colno": 16422,
+              "in_app": true
+            },
+            {
+              "function": "n",
+              "module": "assets/index",
+              "filename": "/assets/index-badca561.js",
+              "abs_path": "http://10.10.46.26:5502/assets/index-badca561.js",
+              "lineno": 62,
+              "colno": 15995,
+              "in_app": true
+            }
+          ]
+        },
+        "mechanism": {
+          "type": "instrument",
+          "handled": true,
+          "data": {
+            "function": "addEventListener",
+            "handler": "bound em",
+            "target": "EventTarget"
+          }
+        }
+      }
+    ]
+  },
+  "extra": {
+    "arguments": [
+      {
+        "currentTarget": "body > div#root",
+        "isTrusted": true,
+        "target": "body > div#root > div.App > div.card > button",
+        "type": "click"
+      }
+    ]
+  },
+  "fingerprint": ["{{ default }}"],
+  "grouping_config": {
+    "enhancements": "eJybzDRxY3J-bm5-npWRgaGlroGxrpHxBABcYgcZ",
+    "id": "newstyle:2019-10-29"
+  },
+  "hashes": ["fe09f9edcc2a9f347d5e840d4ad790ca"],
+  "ingest_path": [
+    {
+      "version": "23.1.1",
+      "public_key": "XE7QiyuNlja9PZ7I9qJlwQotzecWrUIN91BAO7Q5R38"
+    }
+  ],
+  "key_id": "2984969",
+  "level": "error",
+  "location": "/assets/index-badca561.js",
+  "logger": "",
+  "metadata": {
+    "display_title_with_tree_label": false,
+    "filename": "/assets/index-badca561.js",
+    "function": "n",
+    "type": " 47th error: test error  with 0.5030169632678401 ",
+    "value": "test error"
+  },
+  "nodestore_insert": 1676891631.239658,
+  "received": 1676891628.934428,
+  "request": {
+    "url": "http://10.10.46.26:5502/index.html",
+    "headers": [
+      [
+        "User-Agent",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+      ]
+    ]
+  },
+  "sdk": {
+    "name": "sentry.javascript.react",
+    "version": "7.37.2",
+    "integrations": [
+      "InboundFilters",
+      "FunctionToString",
+      "TryCatch",
+      "Breadcrumbs",
+      "GlobalHandlers",
+      "LinkedErrors",
+      "Dedupe",
+      "HttpContext",
+      "BrowserTracing"
+    ],
+    "packages": [{ "name": "npm:@sentry/react", "version": "7.37.2" }]
+  },
+  "timestamp": 1676891627.353,
+  "title": " 47th error: test error  with 0.5030169632678401 : test error",
+  "type": "error",
+  "user": {
+    "ip_address": "103.160.180.12",
+    "geo": { "country_code": "CN", "city": "Shenzhen", "region": "China" }
+  },
+  "version": "7"
+}
