@@ -91,9 +91,9 @@ jobs:
         run: echo "${{ steps.split_repo_name.outputs._1 }}@${{ steps.split_repo_name.outputs._2 }}"
       - name: Download Artifact
         uses: actions/download-artifact@v2
-        with:
-          name: my-artifact
-          path: /home
+        #with:
+          #name: my-artifact
+          #path: /home
       - name: Display structure of downloaded files
         run: ls -R
       - name: Sentry Release
