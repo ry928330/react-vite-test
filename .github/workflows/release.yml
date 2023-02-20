@@ -93,14 +93,16 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: /path/to/download/location
+          path: /home
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Sentry Release
         uses: getsentry/action-release@v1.2.0
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{secrets.SENTRY_PROJECT}}
-          SENTRY_RELEASE_ASSETS: /path/to/download/location/my-artifact
+          SENTRY_RELEASE_ASSETS: /home/my-artifact
         with:
           environment: production
           version: "react-vite-test@${{needs.generate_git_tags.outputs.output_new_tag}}"
