@@ -20,8 +20,8 @@ jobs:
       - name: upload result
         uses: actions/upload-artifact@v1
         with:
-          name: dist
-          path: /dist/
+          name: my-artifact
+          path: dist/
       #- name: Set Output
       #  id: output
       #  run: echo ::set-output name=artifact::dist
@@ -92,7 +92,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
-          name: dist
+          name: my-artifact
           path: /dist/
       - name: Sentry Release
         uses: getsentry/action-release@v1.2.0
@@ -105,4 +105,4 @@ jobs:
           version: "react-vite-test@${{needs.generate_git_tags.outputs.output_new_tag}}"
           sourcemaps: "./dist"
           url_prefix: "~/dist"
-          SENTRY_RELEASE_ASSETS: /dist
+          SENTRY_RELEASE_ASSETS: /dist/my-artifact
