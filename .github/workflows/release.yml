@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: my-artifact
-          path: ${{ github.workspace }}/react-vite-test
+          path: ${{ github.repository }}
 
   information:
     name: GitHub Context
