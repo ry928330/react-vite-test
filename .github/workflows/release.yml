@@ -91,9 +91,9 @@ jobs:
         run: echo "${{ steps.split_repo_name.outputs._1 }}@${{ steps.split_repo_name.outputs._2 }}"
       - name: Download Artifact
         uses: actions/download-artifact@v2
-        #with:
-          #name: my-artifact
-          #path: /home
+        with:
+          name: my-artifact
+          path: dist/
       - name: Display structure of downloaded files
         run: ls -R
       - name: Sentry Release
@@ -102,7 +102,7 @@ jobs:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{secrets.SENTRY_PROJECT}}
-          SENTRY_RELEASE_ASSETS: /home/my-artifact
+          SENTRY_RELEASE_ASSETS: /dist/my-artifact/assets
         with:
           environment: production
           version: "react-vite-test@${{needs.generate_git_tags.outputs.output_new_tag}}"
